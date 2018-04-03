@@ -1,0 +1,139 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+
+html, body{
+    background-color: #ffffff;
+    height: 100%;
+    margin: 0;
+}
+
+.grid{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 75px;
+}
+
+.grid-messages{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-type{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.grid-type-input{
+    font-size: 1.5rem;
+    width: 90%;
+    border-top: 2px solid grey;
+    padding: 10px;    
+}
+.grid-type-button{
+    background-color: black;
+    border-top: 2px solid grey;
+    font-size: 1.5rem;
+    width: 10%;
+    color: white;
+}
+
+.bubble{
+    margin-bottom: 10px;
+    position: relative;
+	background: #00aabb;
+    border-radius: .4em;
+    display: inline-block;
+    padding: 15px;
+    color: white;
+    box-shadow: 4px 4px 18px 0px rgba(0,0,0,0.35);
+
+}
+
+.bubble::after{
+    content: '';
+    position: absolute;
+    width: 0;
+	height: 0;
+}
+
+.bubble__recieved::after{
+	left: 0;
+	top: 25%;
+	border: 20px solid transparent;
+	border-right-color: #00aabb;
+	border-left: 0;
+	margin-top: -10px;
+	margin-left: -13px;
+}
+
+.bubble__send{
+    background-color: #00BB00;
+}
+
+.send{
+    width: 100%;
+    text-align: right;
+}
+
+ul{
+    width: 100%;
+}
+.bubble__send::after{
+	right: 0;
+	top: 25%;
+	border: 21px solid transparent;
+	border-left-color: #00BB00;
+	border-right: 0;
+	margin-top: -10px;
+	margin-right: -13px;
+}
